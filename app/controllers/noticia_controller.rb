@@ -4,6 +4,7 @@ class NoticiaController < ApplicationController
   # GET /noticia or /noticia.json
   def index
     @noticia = Noticium.all
+    @a = 1
   end
 
   # GET /noticia/1 or /noticia/1.json
@@ -65,6 +66,6 @@ class NoticiaController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def noticium_params
-      params.require(:noticium).permit(:id, :encabezado, :cuerpo, :link, :tipo)
+      params.require(:noticium).permit(:encabezado, :cuerpo, :link, :tipo)
     end
 end
